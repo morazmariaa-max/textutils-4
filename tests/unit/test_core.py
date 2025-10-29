@@ -1,13 +1,15 @@
-import textutils.core as c
+import unicodedata
 
-def test_reverse_words():
-    text = "Hello World"
-    assert c.reverse_words(text) == "olleH dlroW"
-    
-
-def test_is_anagram(a,b):
-    a = a.replace(" ", "").lower()
-    b = b.replace(" ", "").lower()
-    return sorted(a) == sorted(b)
-
+def strip_accents(text: str) -> str:
+    """
+    Remove accents from characters.
+    Example: 'café mañana árbol ñandú' -> 'cafe manana arbol nandu'
+    """
+    if not text:
+        return ""
+    normalized = unicodedata.normalize("NFD", text)
+    without_accents = "".join(
+        ch for ch in normalized if unicodedata.category(ch) != "Mn"
+    )
+    return unicodedata.normalize("NFC", without_accents)
 

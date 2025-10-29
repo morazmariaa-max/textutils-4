@@ -1,6 +1,6 @@
 import textutils.core as c
 
-def test_reverse_words():
-    text = "Hello World"
-    assert c.reverse_words(text) == "olleH dlroW"
+def test_word_lenghts():
+    text = "Hello world"
+    assert c.word_lengths(text) == [5, 5]
     

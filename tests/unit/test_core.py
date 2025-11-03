@@ -1,4 +1,5 @@
 import pytest
+import textutils.core as c
 from textutils.core import strip_accents
 
 @pytest.mark.parametrize("inp,exp", [

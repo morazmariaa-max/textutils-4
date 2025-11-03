@@ -4,3 +4,13 @@ def test_reverse_words_basic():
     text = "Hello world"
     expected = "olleH dlrow"
     assert c.reverse_words(text) == expected
+
+def test_reverse_words_with_punctuation():
+    text = "Good morning!"
+    expected = "dooG !gninrom"
+    assert c.reverse_words(text) == expected
+
+def test_reverse_words_mixed_case():
+    text = "Open the Door"
+    expected = "nepO eht rooD"
+    assert c.reverse_words(text) == expected

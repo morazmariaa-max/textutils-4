@@ -4,3 +4,7 @@ def reverse_words(text: str) -> str:
     Example:
         'Hello world' -> 'olleH dlrow'
     """
+
+    words = text.split(" ")
+    reversed_words = [word[::-1] for word in words]
+    return " ".join(reversed_words)

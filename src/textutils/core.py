@@ -1,3 +1,7 @@
+import textutils.core as c
+from textutils.core import is_anagram
+import unicodedata
+
 def reverse_words(text: str) -> str:
     """
     Reverse each word in the input string, keeping the word order.

@@ -33,7 +33,22 @@ def count_vowels(text: str) -> int:
     return sum(1 for char in text if char in vowels)
 import textutils.core as c
 
+<<<<<<< HEAD
 def is_anagram(word1, word2):
     word1 = word1.replace(" ", "").lower()
     word2 = word2.replace(" ", "").lower()
     return sorted(word1) == sorted(word2)
+=======
+def is_anagram(str1: str, str2: str) -> bool:
+    """
+    Check if two strings are anagrams (ignoring spaces and case).
+    Example:
+        is_anagram("amor", "roma") -> True
+        is_anagram("Listen", "Silent") -> True
+    """
+    
+    s1 = str1.replace(" ", "").lower()
+    s2 = str2.replace(" ", "").lower()
+
+    return sorted(s1) == sorted(s2)
+>>>>>>> 4dc3ec9 (feat(is_anagram) working function implem)

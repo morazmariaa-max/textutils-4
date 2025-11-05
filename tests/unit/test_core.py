@@ -1,4 +1,6 @@
+import textutils.core as c
 from textutils.core import is_anagram
+
 
 def test_is_anagram_true_cases():
     assert is_anagram("listen", "silent") is True
@@ -34,3 +36,15 @@ def test_strip_accents_basic():
 def test_count_vowels():
     text = "HELLO world"
     assert c.count_vowels(text) == 3
+
+def test_replace_numbers_basic():
+    text = "Tengo 2 perros y 5 gatos"
+    expected = "Tengo two perros y five gatos"
+    assert c.replace_numbers(text) == expected
+
+def test_replace_numbers_mixed():
+    text = "Compré 1 manzana, 3 peras y 10 plátanos"
+    expected = "Compré one manzana, three peras y ten plátanos"
+    assert c.replace_numbers(text) == expected
+
+

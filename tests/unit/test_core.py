@@ -1,6 +1,6 @@
 import textutils.core as c
 from textutils.core import is_anagram
-
+import unicodedata
 
 def test_is_anagram_true_cases():
     assert is_anagram("listen", "silent") is True

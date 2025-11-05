@@ -50,4 +50,4 @@ def test_full_text_processing_pipeline():
     step2 = c.replace_numbers(step1)      # "Manana zero cafes y ten tortas."
     # 3) reverse words
     final_text = c.reverse_words(step2)   # reverse each word, keep spaces
-    assert final_text == "ananaM orez secaf y net .satrot"
+    assert final_text == "ananaM orez sefac y net .satrot"

@@ -1,5 +1,3 @@
-import textutils.core as c
-from textutils.core import is_anagram
 import unicodedata
 
 def reverse_words(text: str) -> str:
@@ -35,7 +33,6 @@ def count_vowels(text: str) -> int:
     """
     vowels = "aeiouAEIOU"
     return sum(1 for char in text if char in vowels)
-import textutils.core as c
 
 def is_anagram(str1: str, str2: str) -> bool:
     """
